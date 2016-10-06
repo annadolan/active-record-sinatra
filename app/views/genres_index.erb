@@ -1,0 +1,11 @@
+<h1 style="text-align: center">Genres</h1>
+
+<div id="genres">
+  <% @genres.each do |genre| %>
+    <h1 style="font-weight: lighter; text-align: center"><%= genre.name %></h1>
+    <% genre.films.each do |film| %>
+      <h3 style="font-weight: lighter; text-align: center"><%= film.title %></h3>
+    <% end %>
+    <% end %>
+    <p style="text-align: center"><a href="/">Home</a></p>
+<div>

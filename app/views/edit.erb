@@ -1,0 +1,10 @@
+<div style="text-align: center">
+<form action="/films/<%= @film.id %>" method="post">
+  <h2 style="font-weight: lighter">Edit Film Information</h2>
+  <input type="hidden" name="_method" value="PUT" />
+  <input style="border: 2px solid black; border-radius: 4px;" type='text' name='film[title]' value="<%= @film.title %>"/><br/>
+  <input style="border: 2px solid black; border-radius: 4px;" type='text' name='film[year]' value="<%= @film.year %>"/><br/>
+  <input style="border: 2px solid black; border-radius: 4px;" type='text' name='film[box_office_sales]' value="<%= @film.box_office_sales %>"/><br/>
+  </br><input type="submit" value="Submit">
+</form>
+</div>

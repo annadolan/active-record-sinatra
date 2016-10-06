@@ -1,0 +1,16 @@
+<h1 style="font-weight:lighter; text-align: center">All Films</h1>
+
+<p style="text-align: center"><a href="/films/new">Add new film</a></p>
+<p style="text-align: center"><a href="/">Home</a></p>
+
+<div id="films">
+  <% @films.each do |film| %>
+    <h3 style="text-align: center"><a href="/films/<%= film.id %>"><%= film.title %></a> (<%= film.year %>)</h3>
+    <p style="font-weight:lighter; text-align: center">Gross US Box Office Sales: $<%= film.box_office_sales %></p>
+    <p style="text-align: center"><a href="/films/<%= film.id %>/edit">EDIT</a></p>
+    <form style="text-align: center" action="/films/<%= film.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete">
+    </form>
+  <% end %>
+</div>

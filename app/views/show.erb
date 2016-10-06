@@ -1,0 +1,9 @@
+<div style="text-align: center">
+<h1><%= @director.name %></h1>
+<h3>Films:</h3>
+<% @director.films.each do |film| %>
+  <p><%= film.title %></p>
+<% end %>
+<h3>Gross box office sales:</h3> <p><%= @director.films.total_sales %></p>
+<p style="text-align: center"><a href="/directors">Back</a></p>
+</div>

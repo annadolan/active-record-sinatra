@@ -1,0 +1,7 @@
+<div style="text-align: center">
+<h1>Directors</h1>
+<% @directors.each do |director| %>
+  <h3><a href="/directors/<%= director.id %>"><%= director.name %></a></h3>
+<% end %>
+<p style="text-align: center"><a href="/">Home</a></p>
+</div>
